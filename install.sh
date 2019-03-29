@@ -24,3 +24,30 @@ if [ "$OS" = 'Mac' ]; then
   ln -s -vi "$DOTPATH/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
 fi
 
+# from `code --list-extensions`
+vscode_extensions=(
+castwide.solargraph
+christian-kohler.path-intellisense
+CoenraadS.bracket-pair-colorizer
+donjayamanne.githistory
+eamodio.gitlens
+eg2.tslint
+esbenp.prettier-vscode
+GitHub.vscode-pull-request-github
+johnpapa.Angular2
+Kasik96.swift
+Kelvin.vscode-sshfs
+misogi.ruby-rubocop
+MS-CEINTL.vscode-language-pack-ja
+ms-python.python
+rebornix.ruby
+ryu1kn.partial-diff
+sianglim.slim
+vscodevim.vim
+wayou.vscode-todo-highlight
+wmaurer.change-case
+)
+for extension_name in ${vscode_extensions[@]}; do
+  code --install-extension $extension_name
+done
+
