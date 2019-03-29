@@ -1,0 +1,30 @@
+// 既定の設定を上書きするには、このファイル内に設定を挿入します
+{
+    "editor.dragAndDrop": false,
+    "editor.find.autoFindInSelection": true,
+    "editor.minimap.enabled": true,
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary",
+    "window.zoomLevel": 0,
+    "npm.enableScriptExplorer": true,
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#0085C9",
+        "terminalCursor.foreground": "#0085C9"
+    },
+    "vim.easymotion": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<space>"],
+            "after": ["leader", "leader", "s"]   
+        }
+    ],
+    "vim.useSystemClipboard": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;'\",.<>/?",
+    "[typescript]": {
+        "editor.formatOnSave": true
+    },
+    "python.pythonPath": "/usr/local/bin/python3",
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}"
+}
