@@ -1,0 +1,11 @@
+[user]
+  email = r@muk.ai
+  name = Kenta Mukai
+[pull]
+  ff = only
+[core]
+  editor = vim
+[commit]
+  template = ~/.commit_template
+[merge]
+  conflictstyle = diff3
