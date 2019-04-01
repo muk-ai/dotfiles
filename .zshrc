@@ -77,3 +77,7 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
+
