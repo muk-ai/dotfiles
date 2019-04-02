@@ -81,3 +81,4 @@ if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
 
+alias gd='cd $(ghq root)/$(ghq list | peco)'

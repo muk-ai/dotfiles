@@ -9,3 +9,5 @@
   template = ~/.commit_template
 [merge]
   conflictstyle = diff3
+[ghq]
+  root = ~/repos
