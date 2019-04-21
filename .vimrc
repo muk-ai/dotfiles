@@ -18,6 +18,8 @@ syntax on
 set number
 set cursorline
 
+inoremap <silent> jj <ESC>
+
 " performance
 set synmaxcol=200
 

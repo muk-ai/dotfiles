@@ -12,6 +12,12 @@
         "editorCursor.foreground": "#0085C9",
         "terminalCursor.foreground": "#0085C9"
     },
+    "vim.insertModeKeyBindings": [
+        {
+          "before": ["j", "j"],
+          "after": ["<Esc>"]
+        }
+    ],
     "vim.easymotion": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
