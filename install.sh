@@ -31,7 +31,6 @@ christian-kohler.path-intellisense
 CoenraadS.bracket-pair-colorizer
 donjayamanne.githistory
 eamodio.gitlens
-eg2.tslint
 esbenp.prettier-vscode
 GitHub.vscode-pull-request-github
 johnpapa.Angular2
