@@ -34,26 +34,21 @@ function findgrep() {
   find "$1" -type f -not -path '*/node_modules/*' -a -not -path '*/javascripts/packed/*' | xargs grep --color "$2"
 }
 
-function pero() {
-  ack "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less -N'
-}
-
 function who-use-port() {
   lsof -n -P -i ":$1"
 }
 
-# history search by peco
-function peco-history-selection() {
-    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
-    CURSOR=$#BUFFER
-    zle reset-prompt
+function history-fzf() {
+  BUFFER=$(history -n 1 | fzf --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle reset-prompt
 }
-zle -N peco-history-selection
-bindkey '^R' peco-history-selection
+zle -N history-fzf
+bindkey '^R' history-fzf
 
 # file search and open
 function giv() {
-  target_file=`git ls-files | peco`
+  target_file=`git ls-files | fzf`
   if [ -n "$target_file" ]; then
     echo "view $target_file"
     view $target_file
@@ -77,8 +72,9 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-if [ -f ~/.zshrc.local ]; then
-  source ~/.zshrc.local
-fi
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias gd='cd $(ghq root)/$(ghq list | peco)'
+export FZF_DEFAULT_OPTS='--height 60% --reverse --border'
+
+alias gd='cd $(ghq root)/$(ghq list | fzf --no-multi)'
