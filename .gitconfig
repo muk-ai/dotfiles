@@ -11,3 +11,5 @@
   conflictstyle = diff3
 [ghq]
   root = ~/repos
+[pager]
+  branch = cat
