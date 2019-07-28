@@ -13,3 +13,5 @@
   root = ~/repos
 [pager]
   branch = cat
+[alias]
+  co = checkout
