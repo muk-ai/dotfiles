@@ -9,8 +9,8 @@ export LESS='-g -i -M -R -S -W -z-4 -x4'
 
 PATH=/usr/local/bin:$PATH
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 setopt hist_ignore_dups     # ignore duplication command history list
 #setopt share_history
 
