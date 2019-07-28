@@ -10,6 +10,7 @@ Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plug 'leafgarland/typescript-vim'
 call plug#end()
 
+set background=dark
 set t_Co=256
 colorscheme hybrid
 highlight CursorLineNr ctermfg=grey
