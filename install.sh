@@ -33,15 +33,12 @@ donjayamanne.githistory
 eamodio.gitlens
 esbenp.prettier-vscode
 GitHub.vscode-pull-request-github
-johnpapa.Angular2
 Kasik96.swift
-Kelvin.vscode-sshfs
 misogi.ruby-rubocop
 MS-CEINTL.vscode-language-pack-ja
 ms-python.python
 rebornix.ruby
 ryu1kn.partial-diff
-sianglim.slim
 vscodevim.vim
 wayou.vscode-todo-highlight
 wmaurer.change-case
