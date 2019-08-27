@@ -28,7 +28,7 @@ fi
 vscode_extensions=(
 castwide.solargraph
 christian-kohler.path-intellisense
-CoenraadS.bracket-pair-colorizer
+CoenraadS.bracket-pair-colorizer-2
 donjayamanne.githistory
 eamodio.gitlens
 esbenp.prettier-vscode
