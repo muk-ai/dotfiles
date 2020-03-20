@@ -78,3 +78,7 @@ export PATH=$PATH:$GOPATH/bin
 export FZF_DEFAULT_OPTS='--height 60% --reverse --border'
 
 alias gd='cd $(ghq root)/$(ghq list | fzf --no-multi)'
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
