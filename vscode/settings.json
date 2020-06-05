@@ -1,7 +1,7 @@
 // 既定の設定を上書きするには、このファイル内に設定を挿入します
 {
     "editor.dragAndDrop": false,
-    "editor.find.autoFindInSelection": true,
+    "editor.find.autoFindInSelection": "multiline",
     "editor.minimap.enabled": true,
     "editor.tabSize": 2,
     "editor.renderWhitespace": "boundary",
