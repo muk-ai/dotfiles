@@ -41,6 +41,11 @@ if [ "$OS" = 'Mac' ]; then
     vscodevim.vim
     wayou.vscode-todo-highlight
     wmaurer.change-case
+    angular.ng-template
+    dbaeumer.vscode-eslint
+    chrmarti.regex
+    rust-lang.rust
+    visualstudioexptteam.vscodeintellicode
   )
   for extension_name in ${vscode_extensions[@]}; do
     code --install-extension $extension_name
