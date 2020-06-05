@@ -31,6 +31,9 @@
     "[typescript]": {
         "editor.formatOnSave": true
     },
+    "[html]": {
+        "editor.formatOnSave": true
+    },
     "python.pythonPath": "/usr/local/bin/python3",
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}"
 }
