@@ -14,7 +14,7 @@ SAVEHIST=100000
 setopt hist_ignore_dups     # ignore duplication command history list
 #setopt share_history
 
-fpath=(/path/to/homebrew/share/zsh-completions $fpath)
+fpath=(${HOME}/.zsh/completions $fpath)
  
 autoload -U compinit
 compinit -u
