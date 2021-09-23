@@ -17,6 +17,10 @@ do
   ln -s -vi "$DOTPATH/$file_name" "$HOME/$file_name"
 done
 
+mkdir -p ${HOME}/.zsh/completions
+curl -s https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o "${HOME}/.zsh/completions/git-completion.bash"
+curl -s https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh -o "${HOME}/.zsh/completions/_git"
+
 # Visual Studio Code
 if [ "$OS" = 'Mac' ]; then
   ln -s -vi "$DOTPATH/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
