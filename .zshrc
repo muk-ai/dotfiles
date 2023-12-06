@@ -12,7 +12,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 setopt hist_ignore_dups     # ignore duplication command history list
-setopt share_history
+# setopt share_history
 
 fpath=(${HOME}/.zsh/completions $fpath)
  
@@ -39,7 +39,7 @@ function who-use-port() {
 }
 
 function history-fzf() {
-  BUFFER=$(history -n -r 1 | fzf --reverse --query "$LBUFFER" --prompt="History > ")
+  BUFFER=$(history -n -r 1 | fzf --reverse --no-sort --query "$LBUFFER" --prompt="history | fzf > ")
   CURSOR=$#BUFFER
   zle reset-prompt
 }
