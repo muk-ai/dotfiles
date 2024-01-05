@@ -16,5 +16,16 @@
   branch = cat
 [alias]
 #  co = checkout
+  d = difftool
+  dc = difftool --cached
+  s = "!f() { GIT_EXTERNAL_DIFF=difft git show --ext-diff $@; }; f"
+[diff]
+  tool = difftastic
+[difftool]
+  prompt = false
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+  difftool = true
 [url "git@github.com:"]
   pushinsteadof = https://github.com/

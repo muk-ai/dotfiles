@@ -27,7 +27,6 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 
 alias be="bundle exec"
-alias giff="git diff --cached"
 
 
 function findgrep() {
