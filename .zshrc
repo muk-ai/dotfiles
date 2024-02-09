@@ -38,7 +38,8 @@ function who-use-port() {
 }
 
 function history-fzf() {
-  BUFFER=$(history -n -r 1 | fzf --reverse --no-sort --query "$LBUFFER" --prompt="history | fzf > ")
+  #BUFFER=$(history -n -r 1 | fzf --reverse --no-sort --query "$LBUFFER" --prompt="history | fzf > ")
+  BUFFER=$(history -n -r 1 | fzf --reverse --query "$LBUFFER" --prompt="history | fzf > ")
   CURSOR=$#BUFFER
   zle reset-prompt
 }
