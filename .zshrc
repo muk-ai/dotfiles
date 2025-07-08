@@ -55,6 +55,27 @@ function giv() {
   fi
 }
 
+function tm() {
+  local new_session_option="[new]"
+  local session_list
+  session_list=$(tmux ls 2>/dev/null)
+
+  local choice
+  choice=$( (echo "$new_session_option"; echo "$session_list") | fzf --header="Select a session or create a new one" )
+
+  if [[ -z "$choice" ]]; then
+    echo "Cancelled."
+    return 0
+  fi
+
+  if [[ "$choice" == "$new_session_option" ]]; then
+    tmux new-session
+  else
+    local session_name=${choice%%:*}
+    tmux new-session -A -s "$session_name"
+  fi
+}
+
 autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
