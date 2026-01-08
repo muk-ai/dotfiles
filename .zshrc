@@ -106,3 +106,5 @@ alias cdtemp='cd $(mktemp -d)'
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+export HOMEBREW_FORBIDDEN_FORMULAE="node ruby perl python python3 pip npm pnpm yarn claude"
+
