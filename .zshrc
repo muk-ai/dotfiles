@@ -76,6 +76,11 @@ function tm() {
   fi
 }
 
+function osc52() {
+  b64_payload=$(cat - | base64 -w0)
+  printf "\e]52;c;%s\a" "$b64_payload"
+}
+
 autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
