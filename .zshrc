@@ -107,6 +107,7 @@ export FZF_DEFAULT_OPTS='--height 60% --reverse --border'
 
 alias gd='cd $(ghq root)/$(ghq list | fzf --no-multi)'
 alias cdtemp='cd $(mktemp -d)'
+alias ob='cd $OBSIDIAN_VAULT'
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
