@@ -19,15 +19,7 @@ fpath=(${HOME}/.zsh/completions $fpath)
 autoload -U compinit
 compinit -u
 
-# rbenv
-eval "$(rbenv init - zsh)"
-
-# nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-
 alias be="bundle exec"
-
 
 function findgrep() {
   find "$1" -type f -not -path '*/node_modules/*' -a -not -path '*/javascripts/packed/*' | xargs grep --color "$2"
