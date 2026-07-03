@@ -106,3 +106,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export HOMEBREW_FORBIDDEN_FORMULAE="node ruby perl python python3 pip npm pnpm yarn claude"
 
+if [ "$(uname)" = 'Linux' ] && [ -S "$HOME/.ssh/ssh_auth_sock" ]; then
+  export SSH_AUTH_SOCK="$HOME/.ssh/ssh_auth_sock"
+fi
+
