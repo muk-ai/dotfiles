@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'w0ng/vim-hybrid'
-Plug 'Yggdroot/indentLine'
 Plug 'slim-template/vim-slim', { 'for': 'slim' }
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/syntastic', { 'for': 'ruby' }
@@ -39,9 +38,10 @@ set backspace=indent,eol,start
 " copy yanked text to clipboard
 set clipboard+=unnamed
 
-" indentLine
-let g:indentLine_color_term = 239
-let g:indentLine_char = '¦' "use ¦, ┆ or │
+" indent guides
+set list
+let &listchars = 'leadmultispace:¦ ,tab:  '
+highlight SpecialKey ctermfg=239
 
 " mouse
 "set mouse=a
