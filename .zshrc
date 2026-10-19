@@ -1,8 +1,10 @@
 # Created by newuser for 5.2
 
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
+if [[ -z $CLAUDECODE && -z $AI_AGENT ]]; then
+  alias cp='cp -i'
+  alias mv='mv -i'
+  alias rm='rm -i'
+fi
 
 # http://qiita.com/delphinus/items/b04752bb5b64e6cc4ea9
 export LESS='-g -i -M -R -S -W -z-4 -x4'
